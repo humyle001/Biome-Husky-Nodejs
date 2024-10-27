@@ -121,6 +121,11 @@ Husky is used to manage Git hooks.
    ```bash
    npm install --save-dev husky
    ```
+2. Init Husky:
+
+   ```bash
+   npm run husky-init
+   ```
 
 With this setup, every time you attempt to commit, the `pre-commit` script will format your code and add any changes to the commit.
 
