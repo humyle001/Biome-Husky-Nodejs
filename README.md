@@ -125,7 +125,7 @@ Husky is used to manage Git hooks.
 2. Set up Husky to create the `.husky` directory:
 
    ```bash
-   npx husky install
+   npx husky init
    ```
 
 ---
