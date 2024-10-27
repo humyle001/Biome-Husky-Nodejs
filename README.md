@@ -107,7 +107,7 @@ Add the following scripts in your `package.json` to allow easy access to Biome a
 ### Script Explanation:
 
 - **format**: Formats all files using Biome.
-- **prepare**: Initializes Husky and sets up Git hooks.
+- **husky-init**: Initializes Husky and sets up Git hook.
 - **pre-commit**: Formats code, adds formatted files to the commit, and prepares for the commit.
 
 ---
