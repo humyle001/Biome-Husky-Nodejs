@@ -99,8 +99,8 @@ Add the following scripts in your `package.json` to allow easy access to Biome a
 ```json
 "scripts": {
   "format": "npx @biomejs/biome format --write ./",
-  "prepare": "husky init",
-  "pre-commit": "npm run prepare && npm run format && git add ."
+  "husky-init": "npx husky init && npm run prepare && echo 'npm run pre-commit' > .husky/pre-commit",
+  "pre-commit": "npm run husky-init && npm run format && git add ."
 }
 ```
 
@@ -121,28 +121,6 @@ Husky is used to manage Git hooks.
    ```bash
    npm install --save-dev husky
    ```
-
-2. Set up Husky to create the `.husky` directory:
-
-   ```bash
-   npx husky init
-   ```
-
----
-
-## 5. Add a Pre-Commit Hook with Husky
-
-Create a `pre-commit` hook in Husky that will format code with Biome before committing:
-
-```bash
-npx husky add .husky/pre-commit "npm run pre-commit"
-```
-
-This will create a file at `.husky/pre-commit` with the following contents:
-
-```bash
-npm run pre-commit
-```
 
 With this setup, every time you attempt to commit, the `pre-commit` script will format your code and add any changes to the commit.
 
