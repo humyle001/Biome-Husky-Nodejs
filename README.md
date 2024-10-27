@@ -99,7 +99,7 @@ Add the following scripts in your `package.json` to allow easy access to Biome a
 ```json
 "scripts": {
   "format": "npx @biomejs/biome format --write ./",
-  "prepare": "husky",
+  "prepare": "husky init",
   "pre-commit": "npm run prepare && npm run format && git add ."
 }
 ```
